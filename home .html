@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Booking System</title>
+</head>
+<body>
+    <h2>Bus Booking System</h2>
+    <form action="process_booking.php" method="post">
+        <label for="bus_category">Select Bus Category:</label>
+        <select name="bus_category" id="bus_category">
+            <!-- Options populated from the database -->
+            <?php include 'get_bus_categories.php'; ?>
+        </select><br>
+
+        <label for="user_name">Your Name:</label>
+        <input type="text" name="user_name" required><br>
+
+        <label for="seat_count">Number of Seats:</label>
+        <input type="number" name="seat_count" required><br>
+
+        <input type="submit" value="Book Now">
+    </form>
+</body>
+</html>
