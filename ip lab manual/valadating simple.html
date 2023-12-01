@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>A Simple Form with JavaScript Validation</title>
+  <script type="text/javascript">
+    function validate_form() {
+      var valid = true;
+      var nameRegex = /^[a-zA-Z]+$/; // Regular expression to allow only letters
+
+      if (document.contact_form.contact_name.value == "") {
+        alert("Please fill in the 'Your Name' box.");
+        valid = false;
+      } else if (!nameRegex.test(document.contact_form.contact_name.value)) {
+        alert("Please enter a valid name. Numbers and special characters are not allowed.");
+        valid = false;
+      } else {
+        alert("Successful");
+        valid = true;
+      }
+
+      return valid;
+    }
+  </script>
+</head>
+<body bgcolor="#FFFF56">
+  <form name="contact_form" method="post" onSubmit="return validate_form();">
+    <h1>Please Enter Your Name</h1>
+    <p>Your Name: <input type="text" name="contact_name"></p>
+    <p><input type="submit" name="send" value="Send Details"></p>
+  </form>
+</body>
+</html>

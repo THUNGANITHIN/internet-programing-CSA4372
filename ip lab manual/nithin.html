@@ -1,0 +1,30 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Image</title>
+    <style>
+        #myImage {
+            display: none; /* Hide the image initially */
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleImage()">Toggle Image</button>
+    <img id="myImage" src="imaps.jpg" alt="My Image">
+
+    <script>
+        function toggleImage() {
+            var image = document.getElementById("myImage");
+            if (image.style.display === "none") {
+                image.style.display = "block"; // Show the image
+            } else {
+                image.style.display = "none"; // Hide the image
+            }
+        }
+    </script>
+
+</body>
+</html>

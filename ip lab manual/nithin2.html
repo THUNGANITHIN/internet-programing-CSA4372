@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Styles</title>
+    <style>
+        #myText {
+            background-color: red;
+            color: blue;
+            font-size: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="changeStyles()">Change Styles</button>
+    <p id="myText">This is a sample text.</p>
+
+    <script>
+        function changeStyles() {
+            var text = document.getElementById("myText");
+
+            // Change styles
+            text.style.backgroundColor = "green";
+            text.style.color = "yellow";
+            text.style.fontSize = "12px";
+            text.style.fontWeight = "bold";
+        }
+    </script>
+
+</body>
+</html>
